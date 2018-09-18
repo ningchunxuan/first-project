@@ -1,0 +1,34 @@
+{
+  "name": "my-first-project",
+  "version": "1.0.0",
+  "description": "love",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tzj1413009213/my-first-project.git"
+  },
+  "author": "jun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tzj1413009213/my-first-project/issues"
+  },
+  "homepage": "https://github.com/tzj1413009213/my-first-project#readme",
+  "dependencies": {
+    "browser-sync": "^2.24.7",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

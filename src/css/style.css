@@ -1,0 +1,99 @@
+body { min-width: 1190px; }
+
+#box { height: 2770px; }
+
+#box #header { overflow: hidden; }
+
+#box #header .container { overflow: hidden; width: 1000px; }
+
+#box #header .container .top { width: 100%; float: left; }
+
+#box #header .container .top li { margin-left: 10px; }
+
+#box #header .container .top img { float: left; }
+
+#box #header .container .top div { float: left; }
+
+#box #header .container .top div .p1 { height: 30px; line-height: 30px; color: #9A318D; font-size: 20px; font-weight: bold; margin-top: 30px; letter-spacing: 2px; }
+
+#box #header .container .top div .p2 { color: #7F637C; height: 25px; line-height: 25px; font-size: 18px; }
+
+#box #header .container .top .goods { margin-top: 10px; float: right; }
+
+#box #header .container .top .goods div { float: left; }
+
+#box #header .container .top .goods div p { font-weight: bold; color: #60505B; }
+
+#box #header .container .top .goods div .price { color: #A72089; font-weight: normal; }
+
+#box #header .container .top .goods div .btn { width: 73px; color: white; background: #A72089; border-radius: 5px; }
+
+#box #header .container .top .goods img { width: 90px; height: 90px; float: left; margin-right: 10px; }
+
+#box #header .nav { width: 100%; height: 41px; background: #850073; text-align: center; display: flex; flex-direction: row; justify-content: center; }
+
+#box #header .nav ul { width: 1200px; margin-left: 200px; left: 20px; }
+
+#box #header .nav ul li { height: 41px; font-size: 20px; line-height: 41px; float: left; }
+
+#box #header .nav ul li img { height: 38px; }
+
+#box #header .nav ul li a { color: white; border-left: 1px solid white; padding: 0 25px; }
+
+#box #header .nav ul li .sp1 { font-weight: bold; color: #FFDE00; }
+
+#box #header .nav ul li .sp2 { width: 22px; background: #FFDE00; color: #D7349F; font-size: 16px; margin-left: 5px; border-radius: 0 10px 10px 0; }
+
+#box #header .nav ul li .sp3 { width: 22px; background: white; color: #D7349F; font-size: 16px; margin-left: 5px; border-radius: 0 10px 10px 0; }
+
+#box #main_top .container { width: 990px; margin: 0 auto; }
+
+#box #main_top .container > li { border: 1px solid #ccc; border-top: none; }
+
+#box #main_top .container > li span { width: 110px; height: 100%; background: #ccc; text-align: center; margin-right: 6px; }
+
+#box #main_top .container > li:first-child { height: 40px; border-top: 1px solid #ccc; display: flex; flex-direction: row; align-items: center; }
+
+#box #main_top .container > li:first-child input { border: 1px solid #ccc; border-radius: 10px; }
+
+#box #main_top .container > li:nth-child(2) { height: 60px; display: flex; flex-direction: row; align-items: center; }
+
+#box #main_top .container > li:nth-child(2) ul { flex: 1; display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; }
+
+#box #main_top .container > li:nth-child(2) ul li { width: 160px; text-align: center; }
+
+#box #main_top .container > li:nth-child(3) { display: flex; flex-direction: row; align-items: center; }
+
+#box #main_top .container > li:nth-child(3) ul { flex: 1; display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; }
+
+#box #main_top .container > li:nth-child(3) ul li { width: 160px; text-align: center; }
+
+#box #main_top .container > li:nth-child(4) { display: flex; flex-direction: row; align-items: center; }
+
+#box #main_top .container > li:nth-child(4) ul { flex: 1; display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; }
+
+#box #main_top .container > li:nth-child(4) ul li { width: 270px; text-align: center; }
+
+#box #main_top .container > li:nth-child(5) { display: flex; flex-direction: row; align-items: center; }
+
+#box #main_top .container > li:nth-child(5) ul { flex: 1; display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; }
+
+#box #main_top .container > li:nth-child(5) ul li { width: 160px; text-align: center; }
+
+#box #goodslist_box { width: 100%; margin-top: 20px; }
+
+#box #goodslist_box .container li { width: 198px; float: left; margin: 10px 0; }
+
+#box #goodslist_box .container li .price { color: red; font-weight: bold; }
+
+#box #goodslist_box .container li .title { width: 180px; }
+
+#box #goodslist_box .container li .num { color: red; }
+
+#box #goodslist_box .container li .hot { color: blue; }
+
+#box #footer .container { text-align: center; }
+
+#box #footer .container p { padding: 12px; }
+
+#box #footer .container a { color: black; }

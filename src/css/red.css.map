@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACI,UAAG;EACC,KAAK,EAAC,IAAI;EACV,MAAM,EAAE,KAAK;;AAGrB,SAAS;EACL,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,MAAM;EACd,UAAU,EAAE,OAAO;EACnB,oBAAU;IACN,MAAM,EAAE,MAAM;IACd,UAAU,EAAE,KAAK",
+"sources": ["../sass/red.scss"],
+"names": [],
+"file": "red.css"
+}

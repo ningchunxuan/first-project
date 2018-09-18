@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACI,UAAG;EACC,KAAK,EAAC,IAAI;EACV,MAAM,EAAE,KAAK;;AAGrB,WAAW;EACP,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,MAAM;EACd,UAAU,EAAC,OAAO;EAClB,sBAAU;IACN,MAAM,EAAE,MAAM;IACd,UAAU,EAAE,KAAK",
+"sources": ["../sass/white.scss"],
+"names": [],
+"file": "white.css"
+}
