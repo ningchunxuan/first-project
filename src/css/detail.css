@@ -1,3 +1,9 @@
+.fixed { position: fixed; left: 0; top: 0; right: 0; }
+
+#detail_box i { color: #ff0036; }
+
+#detail_box #header { height: 277px; }
+
 #detail_box #header .container { width: 1200px; min-width: 990px; }
 
 #detail_box #header .container .top { width: 100%; height: 25px; background: #F1EFEE; display: flex; flex-direction: row; justify-content: space-between; }
@@ -230,13 +236,13 @@
 
 #detail_box #main .container .main-r ul li .title { font-size: 12px; }
 
-#detail_box #massage .mas_top { width: 1200px; height: 40px; line-height: 40px; margin: 0 auto; border: 1px solid #ccc; }
+#detail_box #massage .mas_top { width: 1200px; height: 40px; line-height: 40px; margin: 0 auto; border: 1px solid #ccc; background: #fff; }
 
-#detail_box #massage .mas_top > ul { height: 40px; font-size: 12px; display: flex; flex-direction: row; justify-content: space-between; }
+#detail_box #massage .mas_top > ul { height: 40px; font-size: 12px; background: #fff; display: flex; flex-direction: row; justify-content: space-between; }
 
 #detail_box #massage .mas_top > ul li:nth-child(1) { font-weight: bold; width: 200px; padding-left: 10px; }
 
-#detail_box #massage .mas_top > ul li:nth-child(2) { flex: 1; }
+#detail_box #massage .mas_top > ul li:nth-child(2) { flex: 1; background: #fff; height: 40px; }
 
 #detail_box #massage .mas_top > ul li:nth-child(2) ul { margin: 0 10px; width: 780px; }
 
@@ -244,7 +250,7 @@
 
 #detail_box #massage .mas_top > ul li:nth-child(3) { width: 200px; }
 
-#detail_box #massage .mas_top > ul li:nth-child(3) button { width: 200px; height: 40px; color: #fff; font-size: 16px; background: #FF0036; display: none; }
+#detail_box #massage .mas_top > ul li:nth-child(3) .mt_btn { width: 200px; height: 40px; color: #fff; font-size: 16px; background: #FF0036; display: none; }
 
 #detail_box #massage .container { width: 1200px; display: flex; flex-direction: row; justify-content: space-between; }
 

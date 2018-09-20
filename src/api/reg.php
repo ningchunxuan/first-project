@@ -19,7 +19,7 @@
             // 获取查询结果
             $result = $conn->query($sql);
             if ($result) {
-                echo "{code:1,message:'success'}";
+                echo "yes";
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }

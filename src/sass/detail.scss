@@ -1,5 +1,10 @@
+.fixed{position: fixed;left:0;top:0;right:0;}
 #detail_box{
+    i{
+        color:#ff0036;
+    }
     #header{
+        height: 277px;
         .container{
             width: 1200px;
             min-width:990px;
@@ -587,9 +592,11 @@
             line-height: 40px;
             margin:0 auto;
             border:1px solid #ccc;
+            background: #fff;
             >ul{
                 height: 40px;
                 font-size:12px;
+                background: #fff;
                 display:flex;
                 flex-direction:row;
                 justify-content:space-between;
@@ -600,7 +607,8 @@
                 }
                 li:nth-child(2){
                     flex:1;
-
+                    background: #fff;
+                    height: 40px;
                     ul{
                         margin:0 10px;
                         width: 780px;
@@ -615,7 +623,7 @@
                 }
                 li:nth-child(3){
                     width: 200px;
-                    button{
+                    .mt_btn{
                         width: 200px;
                         height: 40px;
                         color:#fff;

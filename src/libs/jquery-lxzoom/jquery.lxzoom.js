@@ -15,7 +15,7 @@
 		var defaults = {
 			// 大图区域宽高
 			width:300,
-			height:200,
+			height:300,
 
 			// 位置：right,bottom,left,top
 			position:'right',
