@@ -92,8 +92,10 @@ body { min-width: 1190px; }
 
 #box #goodslist_box .container li .hot { color: blue; }
 
+#box #footer { width: 990px; height: 50px; margin-top: 30px; margin: 0 auto; }
+
 #box #footer .container { text-align: center; }
 
 #box #footer .container p { padding: 12px; }
 
-#box #footer .container a { color: black; }
+#box #footer .container a { color: black; font-size: 12px; }

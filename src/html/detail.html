@@ -4,7 +4,10 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="../css/base.css" />
         <link rel="stylesheet" type="text/css" href="../css/detail.css" />
-        <script type="text/javascript" src="../js/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="../libs/jquery-lxzoom/jquery.lxzoom.css" />
+        <script type="text/javascript" src="../libs/jquery-3.1.1.js"></script>
+        <script type="text/javascript" src="../libs/jquery-lxzoom/jquery.lxzoom.js"></script>
+        <script type="text/javascript" src="../js/detail.js"></script>
     </head>
     <body>
         <div id="detail_box">
@@ -14,8 +17,8 @@
                         <ul>
                             <li><a href="#">天猫首页</a></li>
                             <li><a href="#">喵，欢迎来天猫</a></li>
-                            <li><a href="#">请登录</a></li>
-                            <li><a href="#">免费注册</a></li>
+                            <li><a href="login.html">请登录</a></li>
+                            <li><a href="register.html">免费注册</a></li>
                         </ul>
                             <ul>
                                 <li>
@@ -113,12 +116,31 @@
                             </ul>
                     </div>
                     <div class="logo">
-                        <div class="logo_l fl"></div>
-                        <div class="logo_r ">
-                            <input type="text"  />
+                        <div class="logo_l">
+                            <ul>
+                                <li>TMALL天猫</li>
+                                <li>
+                                    <p>也买酒官方旗舰店</p>
+                                    <span>品牌直销<i></i></span>
+                                </li>
+                                <li>
+                                    <p>描述服务物流</p>
+                                    <span>4.8<i></i></span>
+                                    <span>4.8<i></i></span>
+                                    <span>4.8<i></i></span>
+                                </li>
+                                <li>
+                                    <p>手机逛</p>
+                                    <i></i>
+                                </li>
+                            </ul>
+                            
+
+                        </div>
+                        <div class="logo_r">
+                            <input type="text" placeholder="搜索 天猫 商品/品牌/店铺" />
                             <button class="r_btn1">搜天猫</button>
-                            <button class="r_btn2"
-                            >搜本店</button>
+                            <button class="r_btn2">搜本店</button>
                             <ul>
                                 <li><a href="#">红酒</a></li>
                                 <li><a href="#">进口葡萄酒</a></li>
@@ -176,8 +198,20 @@
             </div>
             <div id="main">
                 <div class="container">
-                    <div class="magnifying">  
+                    <div class="magnifying">
+                        <div class="big_img">
+                            <img src="../img/de_big.jpg" height="430" width="450" alt=""  data-big="../img/de_big.jpg" class="bigImg"/>
+                        </div> 
                         
+                        <div class="img_box">
+                            <img src="../img/TB1aA0ucVYM8KJjSZFuXXcf7FXa_!!0-item_pic.jpg_180x180.jpg" dataBig="../img/TB1aA0ucVYM8KJjSZFuXXcf7FXa_!!0-item_pic.jpg_180x180.jpg"  class="si1"/ >
+                            <img src="../img/TB1ciwVhZrI8KJjy0FhXXbfnpXa_!!0-item_pic.jpg_180x180.jpg"  data-big="../img/TB1ciwVhZrI8KJjy0FhXXbfnpXa_!!0-item_pic.jpg_180x180.jpg" class="si2"/>
+                            <img src="../img/TB1aA0ucVYM8KJjSZFuXXcf7FXa_!!0-item_pic.jpg_180x180.jpg"  data-big="../img/TB1aA0ucVYM8KJjSZFuXXcf7FXa_!!0-item_pic.jpg_180x180.jpg"
+                             class="si3"/>
+                            <img src="../img/TB1BQAnRXXXXXakXVXXXXXXXXXX_!!0-item_pic.jpg_180x180.jpg"  data-big="../img/TB1BQAnRXXXXXakXVXXXXXXXXXX_!!0-item_pic.jpg_180x180.jpg"
+                             class="si4"/>
+                            <img src="../img/TB1LXXJakfb_uJkSnfoXXb_epXa_!!0-item_pic.jpg_180x180.jpg"  data-big="../img/TB1LXXJakfb_uJkSnfoXXb_epXa_!!0-item_pic.jpg_180x180.jpg"  class="si5"/>
+                        </div>
                     </div>
                     <div class="information">
                         <p class="title">也买酒 西班牙进口红酒 桃乐丝公牛血金标干红葡萄酒6支装</p>
@@ -190,15 +224,163 @@
                         <ul>
                             <li>运费<span>上海 至广州 荔湾区 快递 0.00</span></li>
                             <li>
-                                <p>月销量</p><span>111</span>
-                                <p>累计评价</p><span>863</span>
-                                <p>送天猫积分</p><span>284</span>
+                                <span>月销量<b>111</b></span>
+                                <span>累计评价<b>863</b></span>
+                                <span>送天猫积分<b>284</b></span>
+                            </li>
+                            <li>数量
+                                <button class="numder_l"><</button>
+                                <input type="numder" value="1"/>
+                                <button class="numder_l">></button>件
+                            </li>
+                            <li>
+                                <button class="btn_buy">立即购买</button>
+                                <button class="btn_add">加入购物车</button>
+                            </li>
+                            <li>
+                                <span>服务承诺</span>
+                                <span>破损包退</span>
+                                <span>正品保证</span>
+                                <span>极速退款</span>
+                                <span>赠运费险</span>
+                                <button>支付方式</button>
+                            </li>
+                            <li>
+                                <p>检测到您当前处于非安全网络环境，部分商品信息可能不准确，请在交易支付页面再次确认商品价格信息。</p>
                             </li>
                         </ul>
                     </div>
-                    
-                   
+                    <div class="main-r">
+                        <ul>
+                            <li>
+                                <img src="../img/TB1xlbGJ1SSBuNjy0FlXXbBpVXa_!!0-item_pic.jpg_180x180.jpg" height="180" width="180" />
+                                <p class="price">￥889.00</p>
+                                <p class="title">也买酒 法国原瓶进口 拉菲传说波尔多法定产区红葡萄酒 750ML 6支</p>
+                            </li>
+                            <li>
+                                <img src="../img/TB2hO.yrvImBKNjSZFlXXc43FXa_!!217103012-0-item_pic.jpg_180x180.jpg" height="180" width="180" />
+                                <p class="price">￥889.00</p>
+                                <p class="title">也买酒 原瓶进口红酒法国拉菲传奇干红波尔多AOC红酒整箱葡萄酒 *</p>
+                            </li>
+                            <li>
+                                <img src="../img/TB2MyPcJ1uSBuNjy1XcXXcYjFXa_!!217103012-0-item_pic.jpg_180x180.jpg" height="180" width="180" />
+                                <p class="price">￥889.00</p>
+                                <p class="title">也买酒法国拉菲干红葡萄酒（传奇+珍藏+传说）红酒组合750ml6支装</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+            <div id="massage">
+                <div class="mas_top">
+                        <ul>
+                            <li>也买酒官方旗舰店</li>
+                            <li>
+                                <ul>
+                                    <li class="fl">
+                                        <span>商品详情</span>  
+                                        <span>累计评价</span>
+                                    </li>
+                                    <li class="fr">
+                                        <span>手机购买</span>  
+                                        <span><i></i></span>
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                            <li>
+                                <button>加入购物车</button>
+                            </li>
+                        </ul>
+                    </div>
+                <div class="container">
+                    <div class="mas_l">
+                        <ul>
+                            <li>天猫10年老店</li>
+                            <li>
+                               <span>描述4.8-</span> 
+                               <span>服务4.8-</span>
+                               <span>物流4.8-</span>
+                            </li>
+                            <li>
+                                <button class="into">进店逛逛</button>
+                                <button class="favorite">收藏店铺</button>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="bb">宝贝推荐</li>
+                            <li>
+                                <img src="../img/TB1aA0ucVYM8KJjSZFuXXcf7FXa_!!0-item_pic.jpg_180x180.jpg" height="160" width="160" alt="" />
+                                <p class="title">也买酒 西班牙进口红酒 桃乐丝公牛血金标干红葡萄酒6支装</p>
+                                <s>￥1699.00</s>
+                                <span>￥569.00</span>
+                            </li>
+                            <li>
+                                <img src="../img/TB2.Yg2y4SYBuNjSspjXXX73VXa_!!217103012-0-item_pic.jpg_180x180.jpg" height="180" width="180" alt="" />
+                                <p class="title">也买酒 原瓶进口 拉菲珍藏波尔多干红葡萄酒 AOC红酒6支*</p>
+                                <s>￥1699.00</s>
+                                <span>￥569.00</span>
+                            </li>
+                            <li>
+                                <img src="../img/TB1ciwVhZrI8KJjy0FhXXbfnpXa_!!0-item_pic.jpg_180x180.jpg" height="180" width="180" alt="" />
+                                <p class="title">也买酒 西班牙原瓶原装进口红酒 欧娜干红葡萄酒红酒买一得二12支</p>
+                                <s>￥1699.00</s>
+                                <span>￥569.00</span>
+                            </li>
+                        </ul> 
+                    </div>
+                    <div class="mas_c">
+                        <div class="love_heart">
+                            <img src="../img/heart.jpg" height="90" width="120" alt="" class="fl" />
+                            <p>该商品参与了公益宝贝计划，卖家承诺每笔成交将为顶梁柱重病救助行动捐赠0.1元。该商品已累积捐赠430笔</p>
+                            <p>善款用途简介：每30元就可以为一位贫困山区的顶梁柱提供最高10万元的医疗保障，并且不限病种、不限医院，通过支付宝扫描医疗单据就可以实现理赔。这可能是迄今为...了解详情>>
+                            </p>
+                        </div>
+                        <div class="goods_information">
+                            <p>品牌名称：lafite/拉菲</p>
+                            <p>产品参数</p>
+                            <ul >
+                                <li>厂名：法国拉菲集团</li>
+                                <li>配料表：葡萄汁 二氧化硫</li>
+                                <li>产品名称：Lafite/拉菲 传奇系列 整...</li>
+                                <li>系列: 传奇系列</li>
+                                <li>葡萄酒种类: 红葡萄酒</li>
+                                <li>葡萄品种: 其他</li>
+                                <li>包装方式: 包装</li>
+                                <li>搭配菜肴: 红肉/野味/陈乳酪</li>
+                            </ul>
+                            <ul>
+                                <li>厂址：法国拉菲集团</li>
+                                <li>储藏方法：避光恒温保存</li>
+                                <li>净含量: 4500ml</li>
+                                <li>套装规格: 整箱</li>
+                                <li>葡萄酒等级: 法国产区</li>
+                                <li>糖分: 干葡萄酒 （含糖量小于4克/升）</li>
+                                <li>产地: 法国</li>
+                                <li>醒酒时间: 30分钟(含)-60分钟(不含)</li>
+                            </ul>
+                            <ul>
+                                <li>厂家联系方式：021-61838383-8066</li>
+                                <li>保质期：3650 天</li>
+                                <li>品牌: Lafite/拉菲</li>
+                                <li>酒精度: 12%(含)-13%vol(不含)</li>
+                                <li>法国产区: 波尔多</li>
+                                <li>饮酒场合: 商务宴请区</li>
+                                <li>分级: 大区法定产区AOC</li>
+                                <li>采摘年份: 2016-03</li>
+                            </ul>
+                            <div>生产日期：2014-03-12至2017-03-12</div>
+                        </div>
+
+                    </div>
+                    <ul class="mas_r">
+                        <li>商品参数</li>
+                        <li>商品展示图</li>
+                        <li>商品细节</li>
+                        <li>服务质量</li>
+                    </ul>
+                </div>
+                
             </div>
         </div>
     </body>

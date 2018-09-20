@@ -4,206 +4,10 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="../css/base.css" />
         <link rel="stylesheet" type="text/css" href="../css/buycar.css" />
-        <!-- <link rel="stylesheet" type="text/css" href="../font/iconfont.css" /> -->
         
-        <!-- <style type="text/css">
-            body{
-                width: 100%;
-                height: 100%;
-                position:relative;
-
-            }
-            .car{
-                width: 330px;
-                background:#ccc;
-                position:fixed;
-                top:0;
-                bottom:0;
-                right:0;
-                display:flex;
-                flex-direction:row-reverse;
-                justify-content: space-between;
-
-            }
-            .frame{
-                width: 35px;
-                background: #000;
-                position:absolute;
-                top:0;
-                bottom:0;
-                left:0;
-                display:flex;
-                flex-direction: column;
-                justify-content:flex-end;
-            }
-            .addcar{
-                flex:1;
-                margin-top: 200px;
-                color:#fff;
-            }
-            .return{
-               /* flex:1;*/
-                color:#fff;
-            }
-            .car_mes{
-                padding-right: 50px;
-                position:relative;
-            }
-            .car_mes .sum{
-                position:absolute;
-                bottom:10;
-                right:25px;
-            }
-            .car_mes .sum input{
-                width: 10px;
-            }
-            .car_mes .sum button{
-                width: 248px;
-                height: 40px;;
-                background:#ff0036;
-
-            }
-        </style> -->
-        <style type="text/css">
-            .buycar{
-                width: 100%;
-                height: 35px;
-                background:#f3f1f1;
-            }
-            .buycar .car_top{
-                width: 100%;
-                height: 35px;
-                
-            }
-            .car_top ul{
-                width: 100%;
-                height: 35px;
-                line-height: 35px;
-                display:flex;
-                flex-direction: row;
-                justify-content:space-between;
-               
-            }
-            .car_top ul li{
-                
-            }
-            .car_top ul li a{
-                height:100%;
-                line-height: 35px;
-                padding:5px 5px;
-                color:#000;
-                font-size:12px;
-            }
-            .car_top ul li:hover a{
-                background: #fff;
-                color:red;
-            }
-            .car_main >ul{
-                margin-top: 20px;
-                display:flex;
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            .car_main ul .one{
-                font-size:30px;
-            }
-            .car_main ul .two input{
-                border:3px solid #f50;
-                width: 480px;
-                height: 30px;
-            }
-            .car_main ul .two button{
-                background:#f50;
-                width: 80px;
-                height: 36px;
-                color:#fff;
-                font-weight:bold;
-                font-size:16px;
-
-            }
-            .goods_mes ul{
-                display:flex;
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            .goods_mes ul li span{
-                
-            }
-            .goods{
-                width: 990px;
-
-            }
-            .goods li{
-                width: 980px;
-                height: 80px;
-                line-height: 80px;
-                border:1px solid #ccc;
-                padding:0 10px;
-                display:flex;
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            .goods li input{
-                width: 10px;
-                background: #fff;
-            }
-
-            .goods .fr span{
-                margin: 0 80px;
-            }
-            .res{
-
-                width: 980px;
-                height: 50px;
-                line-height: 50px;
-                background: #e4e2e2;
-            }
-            .res button{
-                width: 80px;
-                height: 36px;
-                background: #f50;
-                color:#fff;
-                font-size:18px;
-            }
-        </style>   
+        
     </head>
     <body>
-        <!-- <div class="car">
-            <div class="frame">
-                <ul class="addcar">
-                    <li>1</li>
-                    <li>2</li>
-                    <li class="shop">购物车</li>
-                    <li>4</li>
-                    <li>5</li>
-                </ul>
-                <ul class="return">
-                    <li>1</li>
-                    <li>3</li>
-                    <li class="r-t">top</li>
-                </ul>
-            </div>
-            <div class="car_mes">
-                <ul>
-                    <li>
-                        <input type="checkbox" />全选
-                        <span>全屏查看</span>
-                    </li>
-                    <li>
-                        <input type="checkbox" />
-                        <img src="" alt="" />
-                        <p class="title"></p>
-                        <input type="numder" />
-                        <p class="price">￥69.00</p>
-                    </li>
-                </ul>
-                <div class="sum">
-                    <span>已选<input type="numder" />件</span>
-                    <span class="fr">￥256</span><br/>
-                    <button>结算<</button>
-                </div>
-            </div>
-        </div> -->
         <div class="buycar">
             <div class="container">
                 <div class="car_top">
@@ -222,7 +26,7 @@
                     </ul>
                 </div>
                 <div class="car_main">
-                    <ul>
+                    <ul >
                         <li class="one">购物车</li>
                         <li class="two">
                             <input type="text" />
@@ -230,21 +34,21 @@
                         </li>
                     </ul>
                     <div class="goods_mes">
-                       <ul>
+                        <ul class="mes_top" >
                            <li>
                                <span>全部商品</span>
-                               <span>降价商品</span>
-                               <span>库存紧张</span>
+                               <!-- <span>降价商品</span>
+                               <span>库存紧张</span> -->
                            </li>
                            <li>已选商品（不含运费）
                                 <span>0.00</span>
                                 <button>结算</button>
                             </li>
-                       </ul>
-                       <ul>
+                        </ul>
+                        <ul class="goods_top">
                            <li>
                                <input type="checkbox" /><span>全选</span>
-                               <span>商品信息</span>
+                               <span class="goodsMes">商品信息</span>
                            </li>
                            <li>
                                <span>单价</span>
@@ -252,8 +56,22 @@
                                <span>金额</span>
                                <span>操作</span>
                            </li>
-                       </ul>
+                        </ul>
+                       
                        <ul class="goods">
+                          <!--  <li>
+                                <div class="fl">
+                                    <input type="checkbox" />
+                                   <img src="../img/TB1BQAnRXXXXXakXVXXXXXXXXXX_!!0-item_pic.jpg_30x30.jpg" height="50" width="50" alt="" />
+                                   <span class="title">诶危机今日额外诶挤我耳机哦人家</span>
+                               </div>
+                               <div class="fr">
+                                   <span class="price">￥289.00</span>
+                                   <input type="numder" value="1" />
+                                   <span class="price">￥289.00</span>
+                                   <button>删除</button>
+                               </div>
+                           </li>
                            <li>
                                 <div class="fl">
                                     <input type="checkbox" />
@@ -267,6 +85,32 @@
                                    <button>删除</button>
                                </div>
                            </li>
+                           <li>
+                                <div class="fl">
+                                    <input type="checkbox" />
+                                   <img src="../img/TB1BQAnRXXXXXakXVXXXXXXXXXX_!!0-item_pic.jpg_30x30.jpg" height="50" width="50" alt="" />
+                                   <span class="title">诶危机今日额外诶挤我耳机哦人家</span>
+                               </div>
+                               <div class="fr">
+                                   <span class="price">￥289.00</span>
+                                   <input type="numder" value="1" />
+                                   <span class="price">￥289.00</span>
+                                   <button>删除</button>
+                               </div>
+                           </li>
+                           <li>
+                                <div class="fl">
+                                    <input type="checkbox" />
+                                   <img src="../img/TB1BQAnRXXXXXakXVXXXXXXXXXX_!!0-item_pic.jpg_30x30.jpg" height="50" width="50" alt="" />
+                                   <span class="title">诶危机今日额外诶挤我耳机哦人家</span>
+                               </div>
+                               <div class="fr">
+                                   <span class="price">￥289.00</span>
+                                   <input type="numder" value="1" />
+                                   <span class="price">￥289.00</span>
+                                   <button>删除</button>
+                               </div>
+                           </li> -->
                        </ul>
                         <ul class="res">
                             <li class="fl">
