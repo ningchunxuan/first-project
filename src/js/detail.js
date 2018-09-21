@@ -2,7 +2,9 @@ jQuery(function($){
     // 列表页信息写到详情页
     var id = window.location.search.slice(1).split('=')[1]*1;
     $.get('http://localhost:8899/detail.php',{id:id},function(res){
+        
       	var detail = JSON.parse(res);
+        console.log(detail)
       	var bigImg = document.querySelector('.bigImg');
         var si1 = document.querySelector('.si1');
         var si2 = document.querySelector('.si2');

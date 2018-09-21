@@ -1,7 +1,8 @@
 $(function(){
 	$.get('http://localhost:8899/goodslist.php',function(res){
-		var goodslist = JSON.parse(res);
 
+		var goodslist = JSON.parse(res);
+		console.log(goodslist)
 		var list = goodslist.map(function(obj,idx){
 			return `<li>
 						<a href="html/detail.html?id=${obj.id}">
