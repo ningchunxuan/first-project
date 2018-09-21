@@ -1,59 +1,20 @@
-// document.addEventListener('DOMContentLoaded',()=>{
-//     addcar();
-// })
 
-
-// function addcar(){
-// 	var ul = document.querySelector('.goods');
-// 	var cookies = document.cookie;       
-//     cookies = cookies.split('=')[1];
-//     var buycar = JSON.parse(cookies);
-//     console.log(buycar)
-//     var li = document.createElement('li');
-//     var div = document.createElement('div');
-//     div.className = 'fl';
-//     // var div = document.createElement('div');
-//     // div.className = 'fr';
-    
-//     var img = document.createElement('img');
-//     img.src = '../'+buycar.img;
-//     div.appendChild(img);
-//     li.appendChild(div);
-//     ul.appendChild(li);
-//     console.log(li)
-//     // var lists = buycar.map(function(obj, index){
-//     // 	return`	<li>
-// 	   //              <div class="fl">
-// 	   //                  <input type="checkbox" />
-// 	   //                 	<img src="../${obj.img}" height="50" width="50" alt="" />
-// 	   //                 	<span class="title">${obj.title}</span>
-// 	   //             	</div>
-// 	   //             	<div class="fr">
-// 		  //               <span class="price">￥${obj.price}</span>
-// 	   //                 	<input type="numder" value="1" />
-// 	   //                 	<span class="price">￥${obj.price}</span>
-// 	   //                 	<button>删除</button>
-// 	   //             	</div>
-// 	   //         	</li>`
-//     // }).join('');
-//     // ul.innerHTML = lists;
-// }
 $(function(){
     $.get('http://localhost:8899/getcar.php',function(res){
         var carlist = JSON.parse(res);
         var list = carlist.map(function(obj,idx){
             return  `<li>
                         <div class="fl">
-                            <input type="checkbox" />
+                            <input type="checkbox" class="choose"/>
                             <img src="../${obj.img}" height="50" width="50" alt="" />
-                            <span class="title">${obj.title}</span>
+                            <p class="title">${obj.title}</p>
                         </div>
                         <div class="fr">
-                            <span class="price">￥${obj.price}</span>
+                            <span class="price">￥${obj.price}.00</span>
                             <button data-id="${obj.id}" class="calculation">-</button>
                             <input type="numder" value="${obj.num}" class="numder"/>
                             <button data-id="${obj.id}" class="calculation">+</button>
-                            <span class="price">￥${obj.num*obj.price}</span>
+                            <span class="price p_sum">￥${obj.num*obj.price}.00</span>
                             <button data-id="${obj.id}" class="del_btn">删除</button>
                         </div>
                     </li>`
@@ -74,11 +35,13 @@ $(function(){
                 numder--;
                 if(numder<1){
                     numder = 1;
+                    
                 }
             }
             else{
                 numder++;
             }
+
             $(this).parent('.fr').find('.numder').val(numder)
             $.get('http://localhost:8899/putcar.php',{id:id,num:numder},function(res){
 
@@ -92,6 +55,21 @@ $(function(){
             })
             window.location.reload();
         })
+        
+        //全选
+        var ischecked = true;
+        $('.allcheckbox').on('click', function() {
+
+            //prop() 添加属性(行为的)  attr（）添加属性 
+            if(ischecked) {
+                $('.allcheckbox input').prop('checked', 'checked');
+                $('.choose').prop('checked', 'checked');
+            } else {
+                $('.allcheckbox input').removeAttr('checked');
+                $('.choose').removeAttr('checked');
+            }
+            ischecked = !ischecked;
+        });
     })
     
 });

@@ -97,17 +97,42 @@
 }
 .goods{
     width: 990px;
+    .fr{
+        .calculation{
+            width: 20px;
+            height: 20px;
+        }
+        .p_sum{
+            color:#ff0036;
+            font-weight:bold;
+        }
+        .del_btn{
+            background: #fff;
+        }
+        .del_btn:hover{
+            color:red;
+        }
+    }
 
 }
 .goods li{
     width: 980px;
-    height: 200px;
+    height: 110px;
     line-height: 80px;
     border:1px solid #ccc;
     padding:0 10px;
-    // display:flex;
-    // flex-direction: row;
-    // justify-content: space-between;
+    .fl{
+        .title{
+            float: right;
+            width: 280px;
+            height: 20px;
+            line-height: 20px;
+            padding-top: 25px;
+            color:#333;
+            font-size:14px;
+
+        }
+    }
 }
 .goods li input{
     width: 10px;
@@ -123,6 +148,13 @@
     height: 50px;
     line-height: 50px;
     background: #e4e2e2;
+    padding:0 10px;
+    i{
+        font-weight:bold;
+        font-size:20px;
+        color:#ff0036;
+    }
+
 }
 .res button{
     width: 80px;

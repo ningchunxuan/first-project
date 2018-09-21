@@ -53,6 +53,7 @@ $(function(){
             if(res === 'yes'){
                 window.location.href="../html/detail.html";
             }
+            
         })
         
     })

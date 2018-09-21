@@ -6,7 +6,7 @@
 
 .close p { color: #fff; height: 35px; line-height: 35px; margin-left: 25px; font-size: 20px; }
 
-form { width: 300px; height: 70%; padding: 40px 0 0 25px; }
+.enter { width: 300px; height: 70%; padding: 40px 0 0 25px; }
 
 .username { width: 300px; height: 40px; margin: 15px 0; }
 
