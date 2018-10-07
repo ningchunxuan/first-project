@@ -20,7 +20,11 @@ table { border-collapse: collapse; }
 a { text-decoration: none; }
 
 /*2.添加公共样式*/
-/*body { font:12px Arial,Verdana,"\5b8b\4f53"; color:#666; background:#fff; }*/
+/*body {
+    font:12px Arial,Verdana,"\5b8b\4f53";
+    color:#666;
+    background:#fff;
+}*/
 /*清除浮动（不管）*/
 .clearfix:before, .clearfix:after { /*清楚浮动*/ content: ""; display: table; }
 
@@ -39,6 +43,8 @@ i, em { font-style: normal; text-decoration: none; }
 .fl { float: left; }
 
 .fr { float: right; }
+
+.pointer { cursor: pointer; }
 
 .ac { text-align: center; }
 

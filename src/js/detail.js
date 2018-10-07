@@ -1,10 +1,30 @@
 jQuery(function($){
+    $.get('http://localhost:8899/getcar.php',function(res){
+        var carlist = JSON.parse(res);
+        $('.thing').text(carlist.length)
+    });
+    var determine = false;
+    var cookies = document.cookie;
+    cookies = cookies.split('; ');
+    if(cookies.length > 0){
+        $(cookies).each((idx,item)=>{
+            var arry = item.split('=');
+            if(arry[0] === 'username') {
+                determine = true;
+                $('.user').text(arry[1]);
+                $('.user').css('color','red');
+            }
+            console.log(arry)
+        })
+    }
+    
     // 列表页信息写到详情页
     var id = window.location.search.slice(1).split('=')[1]*1;
     $.get('http://localhost:8899/detail.php',{id:id},function(res){
-        
-      	var detail = JSON.parse(res);
-        console.log(detail)
+        console.log(res)
+        if(res) {
+            var detail = JSON.parse(res);
+        }
       	var bigImg = document.querySelector('.bigImg');
         var si1 = document.querySelector('.si1');
         var si2 = document.querySelector('.si2');
@@ -41,42 +61,47 @@ jQuery(function($){
         brand.innerHTML = obj.goodsName;
         currenGoods = obj;
     })
-    
+    var num = $('.goods_num').val();
+    $('.numder_l').click(function(){ 
+        if($(this).text() === '<'){
+            num--;
+            if(num < 1){
+                num = 1
+            }
+        }
+        else{
+            num++;
+        }
+        $('.goods_num').val(num);
+    })
+
+    // 加入购物车
     $('.btn_add').click(function(){
         var obj
-        $.get('http://localhost:8899/selectid.php',{id:id},function(res){
-            var alone = JSON.parse(res);
-            obj = alone[0];
-            $.get('http://localhost:8899/postcar.php',{img:obj.img,title:obj.title,price:obj.price,num:1},function(res){
-                console.log(res)
-                if(res === 'yes'){
-                    alert('已经添加到购物车');
-                    window.location.href = "../html/buycar.html";
-                }
-            })
-        })   
-    })
-    $('.mt_btn').click(function(){
-        var obj
-        $.get('http://localhost:8899/selectid.php',{id:id},function(res){
-            var alone = JSON.parse(res);
-            obj = alone[0];
-            $.get('http://localhost:8899/postcar.php',{img:obj.img,title:obj.title,price:obj.price,num:1},function(res){
-                console.log(res)
-                if(res === 'yes'){
-                    alert('已经添加到购物车');
-                    window.location.href = "../html/buycar.html";
-                }
-            })
-        })
-    })
+        if(determine){
+            $.get('http://localhost:8899/selectid.php',{id:id},function(res){
+                var alone = JSON.parse(res);
+                obj = alone[0];
+                $.get('http://localhost:8899/postcar.php',{id:obj.id,img:obj.img,title:obj.title,price:obj.price,num:num},function(res){
+                    if(res === 'yes'){
+                        alert('已经添加到购物车');
+                        window.location.href = "../html/buycar.html";
+                    }
+                })
+            })  
+        } else {
+            if(confirm('请登录。。')){
+                $('.cover').show(600);
+                $('.login').show();
+            }
 
-
+        }  
+    })
+    
     // 吸顶菜单
     var header = document.querySelector('#header');
     var main = document.querySelector('#main');
     var btn = document.querySelector('.mt_btn');
-    console.log(btn)
     var mas_top = document.getElementsByClassName('mas_top')[0];
     window.onscroll = function(){
         var hight = header.offsetHeight + main.offsetHeight;
@@ -85,11 +110,9 @@ jQuery(function($){
         if(scrollY>=897){
             mas_top.className = 'mas_top fixed';
             btn.style.display ='block';
-            // hight.className = 'hight mgb';
         }else{
             mas_top.className = 'mas_top';
             btn.style.display ='none';
-            // hight.className = 'hight';
         }
     }
 
@@ -106,4 +129,12 @@ jQuery(function($){
         });
     })
 
+    $('.toLogin').click(function(){
+        $('.cover').show(600);
+        $('.login').show();
+    })
+    $('.toReg').click(function(){
+        $('.cover').show(600);
+        $('.register').show();
+    })
 });

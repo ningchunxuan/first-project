@@ -22,11 +22,11 @@
                     >li{
                         padding:5px;
                         text-align: center;
-                        a{
+                        span{
                             color:#333;
                         }
                     }
-                    li:hover a{
+                    li:hover span{
                         color:red;
                     }
                 }
@@ -225,12 +225,12 @@
                         }
                     }
                     li:nth-child(1){
-                        width: 160px;
                         height: 60px;
                         line-height: 60px;
                         color:#ff0036;
                         font-size:30px;
                         font-weight:bold;
+                        padding:0 10px;
                         border-right:1px solid #ccc;
 
                     }
@@ -519,7 +519,14 @@
                             width: 30px;
                             height: 30px;
                             border:1px solid #ccc;
+                            text-align:center;
                         }
+                        .numder_l{
+                            border:1px solid #ccc;
+                            padding:3px;
+                            background:#ecebeb;
+                        }
+
                     }
                     li:nth-child(4){
                         width: 100%;
@@ -593,6 +600,7 @@
             margin:0 auto;
             border:1px solid #ccc;
             background: #fff;
+            z-index:2;
             >ul{
                 height: 40px;
                 font-size:12px;
@@ -763,5 +771,152 @@
             }
         }
         
+    }
+}
+.cover{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width: 100%;
+    background:rgba(12, 11, 11, 0.78);
+    display:none;
+    .login{
+        width: 350px;
+        height: 400px;
+        background:#ccc;
+        margin:0 auto;
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        border:5px solid rgb(240,235,235);
+        display:none;
+        .close{
+            width: 100%;
+            height: 35px;
+            background:rgba(255,0,54,.8) ;
+            button{
+                width: 20px;
+                height:20px;
+                line-height: 20px;
+                margin-top:8px;
+                background: #fff;
+                border-radius: 50%;
+                float:right;
+                margin-right: 10px;
+            }
+            p{
+                color:#fff;
+                height: 35px;
+                line-height: 35px;
+                margin-left: 25px;
+                font-size:20px;
+            }
+        }
+        .enter{
+            width: 300px;
+            height: 70%;
+            padding: 40px 0 0 25px ; 
+            .username{
+                width: 300px;
+                height: 40px;
+                margin: 15px 0;
+            }
+            .password{
+
+                width: 300px;
+                height: 40px;
+                margin-bottom: 15px;
+            }
+            .btn_login{
+                width: 300px;
+                height: 40px;
+                background:rgba(255,0,54,.8);
+                border:none;
+                border-radius: 5px;
+            }
+            ul{
+                float:right;
+                li{
+                    float:left;
+                    font-size:12px;
+                    padding:20px 0 0 5px;
+                    a{
+                        color:#000;
+                    }
+                }
+                li:hover a{
+                    color:red;
+                }
+
+
+            }
+        }
+    }
+    .register{
+        width: 350px;
+        height: 400px;
+        background:#ccc;
+        margin:0 auto;
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        border:5px solid rgb(240,235,235);
+        display:none;
+        .close{
+            width: 100%;
+            height: 35px;
+            background:rgba(255,0,54,.8) ;
+            button{
+                width: 20px;
+                height:20px;
+                line-height: 20px;
+                margin-top:8px;
+                background: #fff;
+                border-radius: 50%;
+                float:right;
+                margin-right: 10px;
+            }
+            p{
+                color:#fff;
+                height: 35px;
+                line-height: 35px;
+                margin-left: 25px;
+                font-size:20px;
+            }
+        }
+        .menu{
+            width: 300px;
+            height: 70%;
+            padding: 40px 0 0 25px ;
+           .username{
+                width: 300px;
+                height: 40px;
+                margin-bottom: 15px;
+            }
+            .password{
+
+                width: 300px;
+                height: 40px;
+                margin-bottom: 15px;
+            }
+            .phone{
+
+                width: 300px;
+                height: 40px;
+                margin-bottom: 15px;
+            }
+            .btnReg{
+                width: 300px;
+                height: 40px;
+                background:rgba(255,0,54,.8);
+                border:none;
+                border-radius: 5px;
+            }
+
+            
+        }
     }
 }

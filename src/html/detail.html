@@ -9,6 +9,8 @@
         <script type="text/javascript" src="../libs/jquery-3.1.1.js"></script>
         <script type="text/javascript" src="../libs/jquery-lxzoom/jquery.lxzoom.js"></script>
         <script type="text/javascript" src="../js/detail.js"></script>
+        <script type="text/javascript" src="../js/login.js"></script>
+        <script type="text/javascript" src="../js/reg.js"></script>
     </head>
     <body>
         <div id="detail_box">
@@ -16,10 +18,10 @@
                 <div class="container">
                     <div class="top">
                         <ul>
-                            <li><a href="#"><i class="iconfont icon-home2"></i>天猫首页</a></li>
-                            <li><a href="#">喵，欢迎来天猫</a></li>
-                            <li><a href="login.html">请登录</a></li>
-                            <li><a href="register.html">免费注册</a></li>
+                            <li><a href="../index.html"><i class="iconfont icon-home2"></i>天猫首页</a></li>
+                            <li><span class="user">喵，欢迎来天猫</span></li>
+                            <li><span class="toLogin pointer">请登录</span></li>
+                            <li><span class="toReg pointer" >免费注册</span></li>
                         </ul>
                             <ul>
                                 <li>
@@ -29,7 +31,7 @@
                                         <li><a href="#">已卖出的宝贝</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">购物车<span>0</span>件</a></li>
+                                <li><a href="#">购物车<span class="thing">0</span>件</a></li>
                                 <li>
                                     <a href="#">收藏夹</a>
                                     <ul>
@@ -231,7 +233,7 @@
                             </li>
                             <li>数量
                                 <button class="numder_l"><</button>
-                                <input type="numder" value="1"/>
+                                <input  value="1" class="goods_num"/>
                                 <button class="numder_l">></button>件
                             </li>
                             <li>
@@ -290,7 +292,7 @@
                                 
                             </li>
                             <li>
-                                <button class="mt_btn">加入购物车</button>
+                                <button class="mt_btn btn_add">加入购物车</button>
                             </li>
                         </ul>
                     </div>
@@ -381,7 +383,40 @@
                         <li>服务质量</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+        <div class="cover">
+            <div class="login">
+                <div class="close">
+                    <p class="fl">TMALL 天猫</p>
+                    <button class="btn_hide">x</button>
+                </div>
                 
+                <div class="enter">
+                    <p>密码登录</p>
+                    <input type="text" placeholder="用户名" class="username" /><br />
+                    <input type="password" class="password" placeholder="密码"/><br />
+                    <button class="btn_login">登录</button>
+                    <ul>
+                        <li><a href="#">忘记密码</a></li>
+                        <li><a href="#">忘记会员名</a></li>
+                        <li><span class="toReg">免费注册</span></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="register">
+                <div class="close">
+                    <p class="fl">TMALL 天猫</p>
+                    <button class="btn_hide">x</button>
+                </div>
+                <div class="menu">
+                    <p>注册用户</p>
+                    <label for="username">用户名：</label><input type="text" placeholder="以字母开头,数字、字母、下划线、横杠,长度6-20" id="username" class="username" /><br />
+                    <label for="password">密码：</label><input type="password" class="password" id="password" placeholder="不能包含空格,长度6-20"/><br />
+                    <label for="phone">手机号码：</label><input type="text" class="phone" id="phone"/><br />
+                    <button class="btnReg">注册</button>
+                </div>
             </div>
         </div>
     </body>

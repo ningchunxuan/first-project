@@ -12,9 +12,9 @@
 
 #detail_box #header .container .top > ul:first-child > li { padding: 5px; text-align: center; }
 
-#detail_box #header .container .top > ul:first-child > li a { color: #333; }
+#detail_box #header .container .top > ul:first-child > li span { color: #333; }
 
-#detail_box #header .container .top > ul:first-child li:hover a { color: red; }
+#detail_box #header .container .top > ul:first-child li:hover span { color: red; }
 
 #detail_box #header .container .top > ul:last-child { width: 50%; display: flex; flex-direction: row; }
 
@@ -102,7 +102,7 @@
 
 #detail_box #header .container .logo .logo_l ul li { float: left; }
 
-#detail_box #header .container .logo .logo_l li:nth-child(1) { width: 160px; height: 60px; line-height: 60px; color: #ff0036; font-size: 30px; font-weight: bold; border-right: 1px solid #ccc; }
+#detail_box #header .container .logo .logo_l li:nth-child(1) { height: 60px; line-height: 60px; color: #ff0036; font-size: 30px; font-weight: bold; padding: 0 10px; border-right: 1px solid #ccc; }
 
 #detail_box #header .container .logo .logo_l li:nth-child(2) { padding: 10px 10px 0 10px; width: 100px; height: 50px; border-right: 1px solid #ccc; }
 
@@ -212,7 +212,9 @@
 
 #detail_box #main .container .information ul li:nth-child(3) { height: 30px; }
 
-#detail_box #main .container .information ul li:nth-child(3) input { width: 30px; height: 30px; border: 1px solid #ccc; }
+#detail_box #main .container .information ul li:nth-child(3) input { width: 30px; height: 30px; border: 1px solid #ccc; text-align: center; }
+
+#detail_box #main .container .information ul li:nth-child(3) .numder_l { border: 1px solid #ccc; padding: 3px; background: #ecebeb; }
 
 #detail_box #main .container .information ul li:nth-child(4) { width: 100%; height: 80px; line-height: 80px; }
 
@@ -236,7 +238,7 @@
 
 #detail_box #main .container .main-r ul li .title { font-size: 12px; }
 
-#detail_box #massage .mas_top { width: 1200px; height: 40px; line-height: 40px; margin: 0 auto; border: 1px solid #ccc; background: #fff; }
+#detail_box #massage .mas_top { width: 1200px; height: 40px; line-height: 40px; margin: 0 auto; border: 1px solid #ccc; background: #fff; z-index: 2; }
 
 #detail_box #massage .mas_top > ul { height: 40px; font-size: 12px; background: #fff; display: flex; flex-direction: row; justify-content: space-between; }
 
@@ -295,3 +297,47 @@
 #detail_box #massage .container .mas_r { width: 200px; height: 200px; }
 
 #detail_box #massage .container .mas_r li { padding: 10px 40px; color: #666; }
+
+.cover { position: fixed; top: 0; left: 0; height: 100%; width: 100%; background: rgba(12, 11, 11, 0.78); display: none; }
+
+.cover .login { width: 350px; height: 400px; background: #ccc; margin: 0 auto; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: 5px solid #f0ebeb; display: none; }
+
+.cover .login .close { width: 100%; height: 35px; background: rgba(255, 0, 54, 0.8); }
+
+.cover .login .close button { width: 20px; height: 20px; line-height: 20px; margin-top: 8px; background: #fff; border-radius: 50%; float: right; margin-right: 10px; }
+
+.cover .login .close p { color: #fff; height: 35px; line-height: 35px; margin-left: 25px; font-size: 20px; }
+
+.cover .login .enter { width: 300px; height: 70%; padding: 40px 0 0 25px; }
+
+.cover .login .enter .username { width: 300px; height: 40px; margin: 15px 0; }
+
+.cover .login .enter .password { width: 300px; height: 40px; margin-bottom: 15px; }
+
+.cover .login .enter .btn_login { width: 300px; height: 40px; background: rgba(255, 0, 54, 0.8); border: none; border-radius: 5px; }
+
+.cover .login .enter ul { float: right; }
+
+.cover .login .enter ul li { float: left; font-size: 12px; padding: 20px 0 0 5px; }
+
+.cover .login .enter ul li a { color: #000; }
+
+.cover .login .enter ul li:hover a { color: red; }
+
+.cover .register { width: 350px; height: 400px; background: #ccc; margin: 0 auto; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: 5px solid #f0ebeb; display: none; }
+
+.cover .register .close { width: 100%; height: 35px; background: rgba(255, 0, 54, 0.8); }
+
+.cover .register .close button { width: 20px; height: 20px; line-height: 20px; margin-top: 8px; background: #fff; border-radius: 50%; float: right; margin-right: 10px; }
+
+.cover .register .close p { color: #fff; height: 35px; line-height: 35px; margin-left: 25px; font-size: 20px; }
+
+.cover .register .menu { width: 300px; height: 70%; padding: 40px 0 0 25px; }
+
+.cover .register .menu .username { width: 300px; height: 40px; margin-bottom: 15px; }
+
+.cover .register .menu .password { width: 300px; height: 40px; margin-bottom: 15px; }
+
+.cover .register .menu .phone { width: 300px; height: 40px; margin-bottom: 15px; }
+
+.cover .register .menu .btnReg { width: 300px; height: 40px; background: rgba(255, 0, 54, 0.8); border: none; border-radius: 5px; }

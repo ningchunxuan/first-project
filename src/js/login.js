@@ -7,12 +7,17 @@ $(function(){
         let psw = $('.password').val();
         // e.preventDefault();
         $.get('http://localhost:8899/login',{username:user,password:psw},function(res){
-            console.log(res);
             if(res === 'yes'){
-                window.location.href="../html/detail.html";
+                document.cookie = 'username=' + user;
+                window.location.reload();
             } 
         })
-
     });
 
+    $('.btn_hide').click(function(){
+        // $(this).css('background','red');
+        // $('.login').css('display','none');
+        $('.login').hide()
+        $('.cover').hide(600)
+    })
 });

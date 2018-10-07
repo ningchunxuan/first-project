@@ -55,8 +55,11 @@ $(function(){
             }
             
         })
-        
     })
-     
+    $('.btn_hide').click(function(){
+        // $('.register').css('display','none');
+         $('.login').hide()
+        $('.register').hide(600)
+    })
 
 });
